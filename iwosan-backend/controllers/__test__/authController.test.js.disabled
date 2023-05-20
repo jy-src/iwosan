@@ -1,0 +1,54 @@
+const authController = require("../authController");
+const Patient = require("../../models/patientModel");
+
+describe("Auth Controller", () => {
+	test("should create a new patient and return a token", async () => {
+		const req = {
+			body: {
+				name: "Joshua Yohanna",
+				email: "jy@example.com",
+				password: "test1234",
+			},
+		};
+		const res = {
+			status: jest.fn().mockReturnThis(),
+			json: jest.fn(),
+			cookie: jest.fn(),
+		};
+
+		const mockPatient = {
+			_id: "patientId123",
+			name: "Joshua Yohana",
+			email: "jy@example.com",
+			password: "hashedPassword",
+		};
+		Patient.create = jest.fn().mockResolvedValue(mockPatient);
+
+		await authController.signup(req, res);
+
+		expect(Patient.create).toHaveBeenCalledWith({
+			name: "Joshua Yohanna",
+			email: "jy@example.com",
+			password: "hashedPassword",
+		});
+
+		expect(createAndSendToken).toHaveBeenCalledWith(mockPatient, 201, res);
+
+		expect(res.status).toHaveBeenCalledWith(201);
+		expect(res.json).toHaveBeenCalledWith({
+			status: "success",
+			token: expect.any(String),
+			data: {
+				user: {
+					_id: "patientId123",
+					name: "John Doe",
+					email: "john.doe@example.com",
+				},
+			},
+		});
+		expect(res.cookie).toHaveBeenCalledWith("jwt", expect.any(String), {
+			expires: expect.any(Date),
+			httpOnly: true,
+		});
+	});
+});
