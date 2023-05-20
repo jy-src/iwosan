@@ -3,7 +3,7 @@
 > I'm still working on the frontend
 
 ## Back-end
- This is a RESTful API developed for a technical test. It serves as a guide for understanding the API's functionality, endpoints, and usage
+ This is a RESTful API developed using NodeJs, Express and MongoDB. It serves as a guide for understanding the API's functionality, endpoints, and usage
 
 ### Table of Contents
 - Installation
@@ -44,4 +44,9 @@
 - This API uses JSON Web Tokens for authentication.
 
 ## Front-end
+ This is a UI developed using React.
+
+### Table of Contents
+
+
 
