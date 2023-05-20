@@ -46,7 +46,12 @@
 ## Front-end
  This is a UI developed using React.
 
-### Table of Contents
+### Usage
+- Run the app:
+
+  ```javascript
+  npm start
+  ```
 
 
 
