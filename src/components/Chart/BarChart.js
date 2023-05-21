@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
 function BarChart() {
+	// eslint-disable-next-line
 	const [state, setState] = useState({
 		series: [
 			{
