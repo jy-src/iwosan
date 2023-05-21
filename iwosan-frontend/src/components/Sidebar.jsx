@@ -114,7 +114,7 @@ const Sidebar = () => {
           }`}>
           ACCOUNT
         </p>
-        <ul className='mb-52'>
+        <ul className='mb-[450px]'>
           <Link to=''>
             <li className='text-vmc-200 font-normal py-4 pl-8 mb-5 text-xs  flex items-center gap-x-4 cursor-pointer hover:bg-[#DFE0E2] rounded-sm dark:text-white  dark:hover:text-vmc-200'>
               <img
@@ -153,7 +153,7 @@ const Sidebar = () => {
         <div className='w-full h-[.5px] bg-[#D3D3D3]'></div>
         <div className='pl-[26px] flex items-center gap-x-2 pt-[27px]'>
           <img src='/telephone.svg' alt='Icon' />
-          <div>
+          <div className={`${!open && "hidden"}`}>
             <p className='font-bold text-xs text-vmc-300 italic pb-[2px]'>
               Emergency Hotlines:
             </p>

@@ -19,8 +19,7 @@ const patientRouter = require("./routes/patientRoutes.js");
 const app = express();
 
 app.use(cors());
-app.options("*", cors());
-app.use(helmet.crossOriginResourcePolicy("cross - origin"));
+app.use(helmet());
 
 if (process.env.NODE_ENV === "development") {
 	app.use(morgan("dev"));

@@ -16,6 +16,9 @@ module.exports = {
         "tw-dark-100": "#050517",
         "tw-dark-200": "#0C0C35",
       },
+      backgroundImage: {
+        // "tw-bg": "url('/curve.png')",
+      },
     },
   },
   plugins: [],

@@ -11,6 +11,11 @@
       "Helvetica Neue", sans-serif;
   }
 }
+@layer utilities {
+  .bg-tw {
+    background-image: url("/src/curve.png");
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;
