@@ -26,7 +26,7 @@ describe("Patient Model", () => {
 		expect(newPatient.email).toBe(validPatient.email);
 	});
 
-	test("should fail for todo item without required fields", async () => {
+	test("should fail for patient without required fields", async () => {
 		let invalidPatient = {
 			name: "Joshua Yohanna",
 			email: "jy@.com",
