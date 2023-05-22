@@ -5,16 +5,16 @@ import RightContent from "./RightContent";
 import LeftContent from "./LeftContent";
 
 const MainContent = ({ themeSwitchHandler }) => {
-  return (
-    <div className='w-full'>
-      <Nav />
-      <Header themeSwitchHandler={themeSwitchHandler} />
-      <div className='flex gap-x-6'>
-        <LeftContent />
-        <RightContent />
-      </div>
-    </div>
-  );
+	return (
+		<div className="w-full">
+			<Nav />
+			<Header themeSwitchHandler={themeSwitchHandler} />
+			<div className="flex gap-x-6">
+				<LeftContent />
+				<RightContent />
+			</div>
+		</div>
+	);
 };
 
 export default MainContent;
