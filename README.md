@@ -1,6 +1,6 @@
 # Iwosan
 
-> I'm still working on the frontend but it's in the repo
+> Done with frontend
 
 ## Back-end
  This is a RESTful API developed using NodeJs, Express and MongoDB. It serves as a guide for understanding the API's functionality, endpoints, and usage
