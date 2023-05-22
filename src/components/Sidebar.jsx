@@ -10,7 +10,8 @@ const Sidebar = () => {
 		localStorage.removeItem("user");
 		navigate("/");
 	};
-	const [open, setOpen] = useState(true);
+
+	const [open, setOpen] = useState(false);
 
 	const location = useLocation();
 
@@ -54,7 +55,7 @@ const Sidebar = () => {
 	return (
 		<div
 			className={`${
-				open ? "w-[300px]" : "w-[90px]"
+				open ? "w-[300px] fixed z-10 overflow-scroll" : "w-[90px]"
 			} h-full bg-vmc-800 rounded-[20px] py-[20px] duration-300 dark:bg-tw-dark-200`}
 		>
 			<div
